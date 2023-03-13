@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert || Dialog || Prompt</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Alert || Dialog || Prompt </h1>
+
+        <button onclick="myFunction()">Let's Try it - Click Me !</button>
+
+        <p id="demo"></p>
+
+        <p id="confirm"></p>
+    </center>
+
+    <script>
+        function myFunction() {
+            let person = prompt("Please enter your name");
+
+            if (person != null && person == 'ruddro') {
+
+                document.getElementById("demo").innerHTML =
+
+                    "Yes!! " + person + "You are Success";
+
+                var txt;
+                if (confirm("You are success !! You can start the New Journey or You can Cancel It !!")) 
+                {
+                    txt = "You pressed OK! and Let's Begin the Journey";
+                } 
+                else 
+                {
+                    txt = "You pressed Cancel the Journey!";
+                }
+                document.getElementById("confirm").innerHTML = txt;
+
+            }
+            else {
+                alert('You are Wrong !! Enter Right ID NAME');
+            }
+        }
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
